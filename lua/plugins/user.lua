@@ -22,10 +22,16 @@ return {
   { "sheerun/vim-polyglot", lazy = false },
   -- my favorite theme adaptation for nvim
   {
-    "metalelf0/jellybeans-nvim",
+    "yngwarr/jellybeans-nvim",
     lazy = false,
     dependencies = { "rktjmp/lush.nvim" }
   },
+  -- a local copy for tweaking
+  -- {
+  --   dir = '/home/igor/naboo/vim/jellybeans-nvim/',
+  --   lazy = false,
+  --   dependencies = { "rktjmp/lush.nvim" }
+  -- },
   -- I use it for git time machine
   { "emmanueltouzery/agitator.nvim", lazy = false },
   -- strips extra spaces
@@ -138,6 +144,8 @@ return {
   { "windwp/nvim-autopairs", enabled = false },
   -- nice, but adds visual clutter in clojure
   { "lukas-reineke/indent-blankline.nvim", enabled = false },
+  -- until I figure out how to change underline to highlight
+  { "RRethy/vim-illuminate", enabled = false },
 
   -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
   -- {

@@ -9,7 +9,7 @@ return {
   ---@type AstroUIOpts
   opts = {
     -- change colorscheme
-    colorscheme = "night-owl",
+    colorscheme = "jellybeans-nvim",
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
     highlights = {
       init = { -- this table overrides highlights in all themes
@@ -17,6 +17,9 @@ return {
       },
       astrodark = { -- a table of overrides/changes when applying the astrotheme theme
         -- Normal = { bg = "#000000" },
+      },
+      ["jellybeans-nvim"] = {
+        -- StatusLine = { fg = "#e8e8d3", bg = "#151515" }
       },
     },
     -- Icons can be configured throughout the interface
