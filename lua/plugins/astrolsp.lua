@@ -94,6 +94,10 @@ return {
             return client.supports_method "textDocument/semanticTokens/full" and vim.lsp.semantic_tokens ~= nil
           end,
         },
+        -- it's the default value, shouldn't have to use it
+        -- K = {
+        --   function() vim.lsp.buf.hover() end,
+        -- }
       },
     },
     -- A custom `on_attach` function to be run after the default `on_attach` function
@@ -101,6 +105,11 @@ return {
     on_attach = function(client, bufnr)
       -- this would disable semanticTokensProvider for all clients
       -- client.server_capabilities.semanticTokensProvider = nil
+
+      -- turn off the formatter for gq motion to work
+      if client.name == "lua_ls" or client.name == "clojure_lsp" then
+        vim.bo[bufnr].formatexpr = nil
+      end
     end,
   },
 }
