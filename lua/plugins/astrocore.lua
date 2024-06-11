@@ -49,8 +49,15 @@ return {
         -- configure global vim variables (vim.g)
         -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
         -- This can be found in the `lua/lazy_setup.lua` file
+
+        -- LSP docs should be prioritized
+        -- TODO technically, this is needed for clojure buffers only and only
+        --      when LSP is running
         ["conjure#mapping#doc_word"] = false,
-        polyglot_disabled = { "gdscript" }
+        -- semantic tokens are preferred
+        polyglot_disabled = { "gdscript" },
+        -- for nvim lua to work with conjure
+        ["conjure#extract#tree_sitter#enabled"] = true,
       },
     },
     -- Mappings can be configured through AstroCore as well.

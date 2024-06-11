@@ -75,7 +75,7 @@ return {
   {
     "Olical/conjure",
     -- load plugin on filetypes
-    ft = { "clojure" },
+    ft = { "clojure", "lua" },
     init = function()
       vim.g["conjure#log#hud#width"] = 1
       vim.g["conjure#log#hud#enabled"] = false
