@@ -14,3 +14,5 @@
 --     ["~/%.config/foo/.*"] = "fooscript",
 --   },
 -- }
+
+require('ik.sketch')
