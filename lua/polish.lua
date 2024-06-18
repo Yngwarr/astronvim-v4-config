@@ -16,3 +16,8 @@
 -- }
 
 require('ik.sketch')
+
+
+-- an attempt to fix kaocha
+vim.g["conjure#client#clojure#nrepl#test#runner"] = "kaocha"
+vim.g["conjure#client#clojure#nrepl#test#call_suffix"] = "{:kaocha/color? false, :kaocha/reporter [kaocha.report/documentation], :kaocha/capture-output? false, :kaocha.plugin.randomize/randomize? false}"

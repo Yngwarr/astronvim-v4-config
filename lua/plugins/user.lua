@@ -106,6 +106,23 @@ return {
     end,
   },
 
+  {
+    "m00qek/baleia.nvim",
+    version = "*",
+    lazy = false,
+    config = function()
+      vim.g.baleia = require("baleia").setup({ })
+
+      -- Command to colorize the current buffer
+      vim.api.nvim_create_user_command("BaleiaColorize", function()
+        vim.g.baleia.once(vim.api.nvim_get_current_buf())
+      end, { bang = true })
+
+      -- Command to show logs
+      vim.api.nvim_create_user_command("BaleiaLogs", vim.g.baleia.logger.show, { bang = true })
+    end,
+  },
+
   -- == Examples of Overriding Plugins ==
 
   -- customize alpha options
@@ -146,6 +163,8 @@ return {
   { "lukas-reineke/indent-blankline.nvim", enabled = false },
   -- until I figure out how to change underline to highlight
   { "RRethy/vim-illuminate", enabled = false },
+  -- too bright for my taste
+  { "folke/todo-comments.nvim", enabled = false },
 
   -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
   -- {
