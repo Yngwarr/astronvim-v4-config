@@ -106,7 +106,12 @@ return {
       -- client.server_capabilities.semanticTokensProvider = nil
 
       -- turn off the formatter for gq motion to work
-      if client.name == "lua_ls" or client.name == "clojure_lsp" then
+      -- TODO rewrite as a loop
+      if client.name == "lua_ls"
+        or client.name == "clojure_lsp"
+        or client.name == "biome"
+        or client.name == "tsserver"
+      then
         vim.bo[bufnr].formatexpr = nil
       end
     end,
