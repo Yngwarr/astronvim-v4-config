@@ -46,7 +46,13 @@ return {
   -- narrow region (doesn't play nice with LSPs, useful nontheless)
   { "chrisbra/NrrwRgn", lazy = false },
   -- full-file blame
-  { "FabijanZulj/blame.nvim", lazy = false },
+  {
+    "FabijanZulj/blame.nvim",
+    lazy = false,
+    config = function()
+      require("blame").setup()
+    end
+  },
   -- to work with databases directly from vim
   { "tpope/vim-dadbod", lazy = false },
   {
@@ -125,6 +131,7 @@ return {
     end,
   },
 
+  -- :ToggleDiag to turn diagnostics off when they're too noizy
   {
     "WhoIsSethDaniel/toggle-lsp-diagnostics.nvim",
     lazy = false,
@@ -133,6 +140,7 @@ return {
     end
   },
 
+  -- show all diagnostics in one window to read them easier
   {
     "folke/trouble.nvim",
     lazy = false,
@@ -170,6 +178,13 @@ return {
         desc = "Quickfix List (Trouble)",
       },
     },
+  },
+
+  -- TailWindCSS highlighting and other stuff
+  {
+    "luckasRanarison/tailwind-tools.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    opts = {}
   },
 
   -- == Examples of Overriding Plugins ==

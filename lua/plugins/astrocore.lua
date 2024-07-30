@@ -90,7 +90,7 @@ return {
           desc = "Time machine"
         },
 
-        ["<leader>gB"] = { ":ToggleBlame<cr>", desc = "Full-file blame" },
+        ["<leader>gB"] = { ":BlameToggle<cr>", desc = "Full-file blame" },
 
         -- Conjure descriptions
         ["<localleader>e"] = { desc = "Evaluate" },
