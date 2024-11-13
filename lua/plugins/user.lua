@@ -180,13 +180,6 @@ return {
     },
   },
 
-  -- TailWindCSS highlighting and other stuff
-  {
-    "luckasRanarison/tailwind-tools.nvim",
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
-    opts = {}
-  },
-
   -- == Examples of Overriding Plugins ==
 
   -- customize alpha options
@@ -223,6 +216,8 @@ return {
   { "max397574/better-escape.nvim", enabled = false },
   -- I prefer to place my pairs by hand
   { "windwp/nvim-autopairs", enabled = false },
+  -- the same is true for autotags
+  { "windwp/nvim-ts-autotag", enabled = false },
   -- nice, but adds visual clutter in clojure
   { "lukas-reineke/indent-blankline.nvim", enabled = false },
   -- until I figure out how to change underline to highlight
