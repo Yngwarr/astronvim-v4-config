@@ -15,6 +15,12 @@
 --   },
 -- }
 
+vim.filetype.add({
+  pattern = {
+    nfo = "xml"
+  }
+})
+
 require('ik.sketch')
 
 
